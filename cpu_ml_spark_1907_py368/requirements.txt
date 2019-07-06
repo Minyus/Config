@@ -70,4 +70,5 @@ pycausalimpact==0.0.12
 lime==0.1.1.35
 shap==0.29.3
 pyspark==2.4.3
+findspark==1.3.0
 six==1.12.0
