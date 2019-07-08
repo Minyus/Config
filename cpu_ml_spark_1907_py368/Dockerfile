@@ -5,7 +5,7 @@ FROM tensorflow/tensorflow:1.14.0-py3
 
 USER root
 
-ENV DEBIAN_FRONTEND=noninteractive
+ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
     apt-get -yq dist-upgrade && \
@@ -28,7 +28,10 @@ RUN apt-get update && \
 	libxext6 \
 	libxrender-dev \
 	graphviz \
-	ffmpeg &&\
+	ffmpeg \
+	openssh-server \
+	tmux \
+	htop &&\
     rm -rf /var/lib/apt/lists/*
 
 # Spark dependencies
@@ -73,3 +76,22 @@ COPY . /usr/local/etc
 
 # Install any needed packages specified in requirements.txt
 RUN pip3 install -r requirements.txt
+
+# Set up sshd
+# RUN apt-get update && apt-get install -y openssh-server
+RUN mkdir /var/run/sshd
+
+# RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+RUN echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config
+
+# SSH login fix. Otherwise user is kicked off after login
+RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
+
+ENV NOTVISIBLE "in users profile"
+RUN echo "export VISIBLE=now" >> /etc/profile
+RUN sed -i '1 i[ -z "$PS1" ] && return\n'  /etc/bash.bashrc
+
+EXPOSE 22
+
+RUN echo 'root:welcomewelcome' | chpasswd
+CMD ["/usr/sbin/sshd", "-D"]
