@@ -91,6 +91,7 @@ RUN update-locale LANG=C.UTF-8
 EXPOSE 22
 EXPOSE 5000
 EXPOSE 6006
+EXPOSE 4141
 
 RUN echo 'root:welcomewelcome' | chpasswd
 CMD ["/usr/sbin/sshd", "-D"]
