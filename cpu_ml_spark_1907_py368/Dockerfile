@@ -88,10 +88,20 @@ RUN apt-get update && \
 
 RUN update-locale LANG=C.UTF-8
 
+# SSH
 EXPOSE 22
-EXPOSE 5000
-EXPOSE 6006
+
+# kedro viz
 EXPOSE 4141
+
+# mlflow server
+EXPOSE 5000
+
+# tensorboard
+EXPOSE 6006
+
+# jupyter notebook
+EXPOSE 8888
 
 RUN echo 'root:welcomewelcome' | chpasswd
 CMD ["/usr/sbin/sshd", "-D"]
