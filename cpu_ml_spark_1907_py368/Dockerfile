@@ -28,11 +28,15 @@ RUN apt-get update && \
 	libxext6 \
 	libxrender-dev \
 	graphviz \
+	libgraphviz-dev \
+	pkg-config \
 	ffmpeg \
 	curl \
 	net-tools \
 	openssh-server \
 	tmux \
+	tree \
+	vim \
 	htop &&\
     rm -rf /var/lib/apt/lists/*
 
@@ -105,3 +109,9 @@ EXPOSE 8888
 
 RUN echo 'root:welcomewelcome' | chpasswd
 CMD ["/usr/sbin/sshd", "-D"]
+
+
+COPY .xonshrc /root/
+
+RUN curl -L -O https://github.com/peco/peco/releases/download/v0.5.3/peco_linux_amd64.tar.gz
+RUN tar -zxvf peco_linux_amd64.tar.gz && sudo mv peco_linux_amd64/peco /usr/local/bin && rm -rf peco_linux_amd64 peco_linux_amd64.tar.gz

@@ -1,8 +1,9 @@
-kedro==0.14.3
-click==6.7
-kedro-viz==1.0.2
+causallift==1.0.0
+kedro==0.15.0
+click==7.0
+kedro-viz==2.1.0
 kedro-docker==0.1.0
-mlflow==1.0.0
+mlflow==1.2.0
 flatten-dict==0.1.0
 ipython>=7.0.0, <8.0
 jupyter>=1.0.0, <2.0
@@ -16,15 +17,18 @@ sphinx>=1.6.3, <2.0
 sphinx_rtd_theme==0.4.1
 nbsphinx==0.3.4
 nbstripout==0.3.3
+recommonmark==0.5.0
 sphinx-autodoc-typehints==1.6.0
+sphinx_copybutton==0.2.5
 jupyter_client>=5.1.0, <6.0
 tornado>=4.2, <6.0
 ipykernel>=4.8.1, <5.0
+docutils==0.14
 easydict==1.9
+optuna==0.14.0
 gensim==3.6.0
 geopy==1.17.0
 h5py==2.8.0
-hyperopt==0.1.2
 imbalanced-learn==0.4.3
 Keras==2.2.4
 Keras-Applications==1.0.8
@@ -37,7 +41,6 @@ matplotlib-venn==0.11.5
 mesh-tensorflow==0.0.5
 networkx==2.3
 nltk==3.2.5
-numexpr==2.6.9
 numpy==1.16.4
 opencv-contrib-python==3.4.3.18
 opencv-python==3.4.5.20
@@ -68,14 +71,13 @@ tensorflow-hub==0.4.0
 tensorflow-metadata==0.13.0
 tensorflow-probability==0.7.0
 tflearn==0.3.2
-torch==1.1.0
+torch==1.2.0
+pytorch-lightning==0.4.5
 torchsummary==1.5.1
 torchtext==0.3.1
 torchvision==0.3.0
 tqdm==4.28.1
-tweepy==3.6.0
 xgboost==0.90
-optuna==0.13.0
 vprof==0.37.6
 vaderSentiment==3.2.1
 pyLDAvis==2.1.2
@@ -85,8 +87,16 @@ pycausalimpact==0.0.12
 lime==0.1.1.35
 shap==0.29.3
 pyspark==2.4.3
-findspark==1.3.0
 six==1.12.0
 yappi==1.0
 ax-platform==0.1.3
 dtreeviz==0.5
+pygraphviz
+pipdeptree
+scikit-optimize
+nested-lookup
+isort
+black
+xonsh
+flake8
+mypy
