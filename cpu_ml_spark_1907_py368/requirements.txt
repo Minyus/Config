@@ -50,7 +50,7 @@ pandas-datareader==0.7.0
 pandas-gbq==0.4.1
 pandas-profiling==1.4.1
 Pillow==4.3.0
-plotly==3.6.1
+plotly
 pyarrow==0.12.0
 python-louvain==0.13
 pytz==2018.9
@@ -101,3 +101,6 @@ black
 xonsh
 flake8
 mypy
+geopandas
+contextily
+Werkzeug>=0.15.5
