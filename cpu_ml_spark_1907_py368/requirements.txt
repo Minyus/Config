@@ -102,5 +102,4 @@ xonsh
 flake8
 mypy
 geopandas
-contextily
 Werkzeug>=0.15.5

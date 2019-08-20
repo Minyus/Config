@@ -34,6 +34,7 @@ RUN apt-get update && \
 	curl \
 	net-tools \
 	openssh-server \
+	xauth \
 	tmux \
 	tree \
 	vim \
