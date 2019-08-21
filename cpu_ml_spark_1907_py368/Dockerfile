@@ -38,6 +38,7 @@ RUN apt-get update && \
 	tmux \
 	tree \
 	vim \
+	x11-apps \
 	htop &&\
     rm -rf /var/lib/apt/lists/*
 
@@ -76,6 +77,7 @@ RUN mkdir /var/run/sshd
 
 # RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 RUN echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config
+RUN echo 'X11UseLocalhost no' >> /etc/ssh/sshd_config
 
 # SSH login fix. Otherwise user is kicked off after login
 RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
