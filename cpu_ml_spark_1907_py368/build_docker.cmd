@@ -1,2 +1,2 @@
-docker build -t minyus86/cpu_ml_spark_1907_py368:v1.1.1 .
+docker build -t minyus86/cpu_ml_spark_py368:v1.3.0 .
 pause

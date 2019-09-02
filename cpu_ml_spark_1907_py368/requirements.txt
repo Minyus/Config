@@ -103,3 +103,5 @@ flake8
 mypy
 geopandas
 Werkzeug>=0.15.5
+ludwig
+Cython==0.29.10

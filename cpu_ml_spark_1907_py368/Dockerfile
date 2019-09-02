@@ -38,7 +38,10 @@ RUN apt-get update && \
 	tmux \
 	tree \
 	vim \
+	libgmp-dev libmpfr-dev libmpc-dev \
 	x11-apps \
+	curl \
+	net-tools \
 	htop &&\
     rm -rf /var/lib/apt/lists/*
 
@@ -68,8 +71,13 @@ WORKDIR /usr/local/etc
 # Copy the current directory contents into the container
 COPY . /usr/local/etc
 
+# make sure pip, virtualenv and setuptools are updated
+RUN python3 -m pip install --upgrade --user pip setuptools
+
 # Install any needed packages specified in requirements.txt
 RUN pip3 install -r requirements.txt
+
+RUN python -m spacy download en
 
 # Set up sshd
 # RUN apt-get update && apt-get install -y openssh-server
@@ -86,12 +94,6 @@ ENV NOTVISIBLE "in users profile"
 RUN echo "export VISIBLE=now" >> /etc/profile
 RUN sed -i '1 i[ -z "$PS1" ] && return\n'  /etc/bash.bashrc
 
-RUN apt-get update && \
-    apt-get -yq dist-upgrade && \
-    apt-get install -yq --no-install-recommends \
-	curl \
-	net-tools &&\
-    rm -rf /var/lib/apt/lists/*
 
 RUN update-locale LANG=C.UTF-8
 
@@ -113,8 +115,8 @@ EXPOSE 8888
 RUN echo 'root:welcomewelcome' | chpasswd
 CMD ["/usr/sbin/sshd", "-D"]
 
-
 COPY .xonshrc /root/
 
 RUN curl -L -O https://github.com/peco/peco/releases/download/v0.5.3/peco_linux_amd64.tar.gz
 RUN tar -zxvf peco_linux_amd64.tar.gz && sudo mv peco_linux_amd64/peco /usr/local/bin && rm -rf peco_linux_amd64 peco_linux_amd64.tar.gz
+
