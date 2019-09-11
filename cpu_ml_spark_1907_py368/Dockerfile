@@ -120,3 +120,6 @@ COPY .xonshrc /root/
 RUN curl -L -O https://github.com/peco/peco/releases/download/v0.5.3/peco_linux_amd64.tar.gz
 RUN tar -zxvf peco_linux_amd64.tar.gz && sudo mv peco_linux_amd64/peco /usr/local/bin && rm -rf peco_linux_amd64 peco_linux_amd64.tar.gz
 
+RUN pip3 install git+https://github.com/Minyus/scikit-optimize@depr/fit_params
+RUN pip3 install git+https://github.com/Minyus/optuna@feature_facade
+
