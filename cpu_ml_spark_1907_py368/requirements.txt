@@ -1,5 +1,5 @@
 causallift==1.0.0
-kedro==0.15.0
+kedro==0.15.2
 click==7.0
 kedro-viz==2.1.0
 kedro-docker==0.1.0
@@ -47,7 +47,7 @@ opencv-python==3.4.5.20
 pandas==0.24.2
 pandas-datareader==0.7.0
 pandas-gbq==0.4.1
-pandas-profiling==1.4.1
+pandas-profiling>=2.0.0
 Pillow==4.3.0
 plotly
 pyarrow==0.12.0
@@ -103,4 +103,13 @@ geopandas
 Werkzeug>=0.15.5
 ludwig
 Cython==0.29.10
-koalas==0.17.0
+koalas>=0.17.0
+category_encoders
+featuretools
+boruta
+modin
+parse
+fastai
+pytorch-ignite
+catalyst
+twine
