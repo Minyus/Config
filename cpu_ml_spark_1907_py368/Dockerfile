@@ -72,10 +72,12 @@ WORKDIR /usr/local/etc
 COPY . /usr/local/etc
 
 # make sure pip, virtualenv and setuptools are updated
-RUN python3 -m pip install --upgrade --user pip setuptools
+# RUN python3 -m pip install --upgrade --user pip setuptools
+
+# RUN pip install --upgrade pip
 
 # Install any needed packages specified in requirements.txt
-RUN pip3 install -r requirements.txt
+RUN pip install -r requirements.txt
 
 RUN python -m spacy download en
 
