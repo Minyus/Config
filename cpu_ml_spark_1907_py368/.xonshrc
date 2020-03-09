@@ -32,7 +32,7 @@ $PTK_STYLE_OVERRIDES={
 
 import platform
 
-if platform.system() == 'Darwin':
+if 0: # platform.system() == 'Darwin':
     aliases["lt"] = "colorls --tree"
     aliases["ll"] = "colorls -ltr --sf"
     aliases["la"] = "colorls -la"
