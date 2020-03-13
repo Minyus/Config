@@ -13,25 +13,17 @@ $AUTO_CD = True
 $XONSH_SHOW_TRACEBACK = True
 $SUPPRESS_BRANCH_TIMEOUT_MESSAGE = True
 $UPDATE_COMPLETIONS_ON_KEYPRESS = True
-$PROMPT = "{INTENSE_RED} {cwd} {YELLOW}$ "
+$PROMPT = "{BACKGROUND_BLACK}{INTENSE_YELLOW}{cwd} {WHITE}{prompt_end}{BACKGROUND_#FFFFFF} "
 $BOTTOM_TOOLBAR = "{BACKGROUND_INTENSE_GREEN} {user}{BACKGROUND_WHITE}@{BACKGROUND_INTENSE_PURPLE}{hostname} {BACKGROUND_WHITE}| {BACKGROUND_INTENSE_RED}{curr_branch} "
 $XONSH_HISTORY_SIZE = (3000, 'commands')
 $XONSH_HISTORY_MATCH_ANYWHERE = True
 
 
-import platform
-
-if 0: # platform.system() == 'Darwin':
-    aliases["lt"] = "colorls --tree"
-    aliases["ll"] = "colorls -ltr --sf"
-    aliases["la"] = "colorls -la"
-else:
-    # aliases['ls'] = "ls --color=auto"
-    aliases["ll"] = "ls -lha"
-    aliases["lt"] = "ls -lhat"
-    aliases['free'] = "free -h"
-    aliases['fh'] = 'free -h'
-    aliases['wf'] = 'watch free -h'
+aliases["ll"] = "ls -lha"
+aliases["lt"] = "ls -lhat"
+aliases['free'] = "free -h"
+aliases['fh'] = 'free -h'
+aliases['wf'] = 'watch free -h'
 aliases["vi"] = "vim"
 aliases["vx"] = "vim ~/.xonshrc"
 aliases["vv"] = "vim ~/.vimrc"
