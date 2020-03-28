@@ -1,7 +1,7 @@
 " Mapping for Select-All
 map <C-a> <esc>ggVG<CR>
 
-" Insert-mode Non-recursive Mapping for Escape 
+" Insert-mode Non-recursive Mapping for Escape
 inoremap <silent> jj <ESC>
 
 " Change the vim cursor in insert/normal mode
@@ -59,7 +59,7 @@ Plug 'scrooloose/syntastic'
 Plug 'bronson/vim-trailing-whitespace'
 "" auto complete
 Plug 'sheerun/vim-polyglot'
-Plug 'Valloric/YouCompleteMe'
+" Plug 'Valloric/YouCompleteMe'
 Plug 'ervandew/supertab'
 "" html
 Plug 'hail2u/vim-css3-syntax'
