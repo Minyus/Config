@@ -89,22 +89,22 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsEditSplit="vertical"
 
 "" youcompleteme
-let g:ycm_server_python_interpreter = '/usr/local/bin/python3'
-let g:ycm_python_binary_path = '/usr/local/bin/python3'
-let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/.ycm_extra_conf.py'
-let g:ycm_auto_trigger = 1
-let g:ycm_min_num_of_chars_for_completion = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_key_list_select_completion = ['<Down>']
-let g:ycm_key_list_previous_completion = ['<Up>']
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "ᐅ"
-let g:ycm_key_list_stop_completion = ['<C-y>', '<Enter>']
-let g:ycm_seed_identifiers_with_syntax = 1
-let g:SuperTabDefaultCompletionType = '<C-n>'
-let g:make = 'gmake'
-if exists('make')
-    let g:make = 'make'
-endif
+" let g:ycm_server_python_interpreter = '/usr/local/bin/python3'
+" let g:ycm_python_binary_path = '/usr/local/bin/python3'
+" let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/.ycm_extra_conf.py'
+" let g:ycm_auto_trigger = 1
+" let g:ycm_min_num_of_chars_for_completion = 1
+" let g:ycm_autoclose_preview_window_after_insertion = 1
+" let g:ycm_key_list_select_completion = ['<Down>']
+" let g:ycm_key_list_previous_completion = ['<Up>']
+" inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "ᐅ"
+" let g:ycm_key_list_stop_completion = ['<C-y>', '<Enter>']
+" let g:ycm_seed_identifiers_with_syntax = 1
+" let g:SuperTabDefaultCompletionType = '<C-n>'
+" let g:make = 'gmake'
+" if exists('make')
+"     let g:make = 'make'
+" endif
 
 "" auto-format
 au BufWrite * :Autoformat
