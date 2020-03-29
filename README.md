@@ -12,8 +12,25 @@
 ## Vim plugin for VSCode
 
 - `.vimrc` config support (since v1.12.0 (2019-12-01))
-- Clarify the mode by changing cursor to `|` in insert mode.
+- Clarify the mode by chainging cursor to `|` in insert mode.
 - Put https://github.com/Minyus/Config/blob/master/cpu_ml_spark_1907_py368/.vimrc in ~ directory
+
+## Selected Vim commands
+
+- Switch to insert mode:
+  - `<i>`
+  - `<Cmd + i>`: Move cursor to beginning of the line
+  - `<Cmd + a>`: Move cursor to end of the line
+- Switch to normal mode
+  - `<Escape>`
+- Delete or cut
+  - `<dd>`: delete/cut the line
+- Yank or copy
+  - `<yy>`: yank/copy the line
+- Paste
+  - `<p>`
+- Undo
+  - `<u>`
 
 ## Other plugins for VSCode
 
