@@ -31,3 +31,7 @@
 
 - Vim for Android
 - https://play.google.com/store/apps/details?id=com.droidvim&hl=en_SG
+
+<p align="center">
+<img src="img/DroidVim_Screenshot.png">
+</p>
