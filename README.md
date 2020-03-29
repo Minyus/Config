@@ -23,10 +23,10 @@
   - `<Cmd + a>`: Move cursor to end of the line
 - Switch to normal mode
   - `<Escape>`
-- Delete or cut
-  - `<dd>`: delete/cut the line
-- Yank or copy
-  - `<yy>`: yank/copy the line
+- Cut
+  - `<dd>`: delete the line
+- Copy
+  - `<yy>`: yank the line
 - Paste
   - `<p>`
 - Undo
