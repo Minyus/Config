@@ -10,7 +10,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
     apt-get -yq dist-upgrade && \
     apt-get install -yq --no-install-recommends \
-	apt-utils \
+    apt-utils \
     wget \
     bzip2 \
     ca-certificates \
@@ -25,24 +25,24 @@ RUN apt-get update && \
     pandoc \
     tzdata \
     unzip \
-	libxext6 \
-	libxrender-dev \
-	graphviz \
-	libgraphviz-dev \
-	pkg-config \
-	ffmpeg \
-	curl \
-	net-tools \
-	openssh-server \
-	xauth \
-	tmux \
-	tree \
-	vim \
-	libgmp-dev libmpfr-dev libmpc-dev \
-	x11-apps \
-	curl \
-	net-tools \
-	htop &&\
+    libxext6 \
+    libxrender-dev \
+    graphviz \
+    libgraphviz-dev \
+    pkg-config \
+    ffmpeg \
+    curl \
+    net-tools \
+    openssh-server \
+    xauth \
+    tmux \
+    tree \
+    vim \
+    libgmp-dev libmpfr-dev libmpc-dev \
+    x11-apps \
+    curl \
+    net-tools \
+    htop &&\
     rm -rf /var/lib/apt/lists/*
 
 # Spark dependencies
@@ -96,7 +96,7 @@ RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so
 
 ENV NOTVISIBLE "in users profile"
 RUN echo "export VISIBLE=now" >> /etc/profile
-RUN sed -i '1 i[ -z "$PS1" ] && return\n'  /etc/bash.bashrc
+RUN sed -i '1 i[ -z "$PS1" ] && return\n' /etc/bash.bashrc
 
 
 RUN update-locale LANG=C.UTF-8
@@ -120,10 +120,9 @@ RUN echo 'root:welcomewelcome' | chpasswd
 CMD ["/usr/sbin/sshd", "-D"]
 
 COPY .xonshrc /root/
+COPY .vimrc /root/
 
 RUN curl -L -O https://github.com/peco/peco/releases/download/v0.5.3/peco_linux_amd64.tar.gz
 RUN tar -zxvf peco_linux_amd64.tar.gz && sudo mv peco_linux_amd64/peco /usr/local/bin && rm -rf peco_linux_amd64 peco_linux_amd64.tar.gz
 
 RUN pip3 install git+https://github.com/Minyus/scikit-optimize@depr/fit_params
-RUN pip3 install git+https://github.com/Minyus/optuna@feature_facade
-
