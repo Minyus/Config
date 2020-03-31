@@ -3,7 +3,7 @@
 ## Xonsh
 
 - Install by `pip install xonsh` (or `apt` for Linux, `brew` for macOS)
-- Auto-suggestions (similar to fish): `<Cmd + e>` for macOS
+- Auto-suggestions (similar to fish): `<right-arrow>` or `<Ctrl + e>` for macOS & Windows
 - Tab-completion
 - Automatic cd (enabled by `$AUTO_CD = True` in `.xonshrc`)
 - Easy to customize prompt
