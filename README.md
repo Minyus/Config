@@ -7,6 +7,7 @@
 - Tab-completion
 - Automatic cd (enabled by `$AUTO_CD = True` in `.xonshrc`)
 - Easy to customize prompt
+- Add aliases (e.g. `aliases["dd"] = "cd .."`)
 - Put https://github.com/Minyus/Config/blob/master/cpu_ml_spark_1907_py368/.xonshrc in ~ directory
 
 ## Vim plugin for VSCode
@@ -38,7 +39,9 @@
 - `GitLens` (https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 - `Git Graph` (https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
 - `Bracket Pair Colorizer 2` (https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
-- `YAML`
+- `File Util` (https://marketplace.visualstudio.com/items?itemName=sleistner.vscode-fileutils)
+  - "fileutils.delete.useTrash": true
+- `YAML` (https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml)
 
 ## Pycharm
 
