@@ -78,6 +78,7 @@ COPY . /usr/local/etc
 
 # RUN pip install --upgrade pip
 
+RUN pip install keyrings.alt>=3.4.0
 # Install any needed packages specified in requirements.txt
 RUN pip install -r requirements.txt
 
