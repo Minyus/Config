@@ -11,10 +11,6 @@ numexpr
 pytorch-ignite
 pytorch-pretrained-bert
 pytorch-transformers
-tensorboard>=2
-tensorflow>=2
-tensorflow-estimator>=2
-tensorflow-hub
 click
 flatten-dict
 ipython
@@ -105,3 +101,6 @@ featuretools
 modin
 parse
 twine
+grpcio
+grpcio-tools
+imgaug

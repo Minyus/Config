@@ -1,5 +1,5 @@
 # tensorflow official image
-FROM tensorflow/tensorflow:1.14.0-py3
+FROM tensorflow/tensorflow:1.15.2-py3
 
 # Reference Dockerfile from https://hub.docker.com/r/jupyter/pyspark-notebook/dockerfile
 
