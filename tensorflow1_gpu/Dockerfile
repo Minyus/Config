@@ -59,6 +59,11 @@ COPY . /usr/local/etc
 
 RUN pip install --upgrade keyrings.alt
 # Install any needed packages specified in requirements.txt
+RUN pip install \
+    pandas \
+    opencv-python \
+    imgaug \
+    xonsh
 
 # Set up sshd
 # RUN apt-get update && apt-get install -y openssh-server
