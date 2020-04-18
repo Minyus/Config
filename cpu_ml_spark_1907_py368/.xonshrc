@@ -21,6 +21,7 @@ $XONSH_HISTORY_SIZE = (3000, 'commands')
 $XONSH_HISTORY_MATCH_ANYWHERE = True
 
 
+aliases["ls"] = "ls -lha"
 aliases["ll"] = "ls -lha"
 aliases["lt"] = "ls -lhat"
 aliases['free'] = "free -h"
@@ -42,7 +43,8 @@ aliases["t"] = "tree -L 1 -a -f -p --si --du --timefmt '%Y/%m/%d(%a) %H:%M;%S'"
 aliases["tt"] = "tree -L 2 -a -f -p --si --du --timefmt '%Y/%m/%d(%a) %H:%M:%S'"
 aliases["ttt"] = "tree -L 3 -a -f -p --si --du --timefmt '%Y/%m/%d(%a) %H:%M:%S'"
 aliases["tttt"] = "tree -L 4 -a -f -p --si --du --timefmt '%Y/%m/%d(%a) %H:%M:%S'"
-aliases["pip"] = "sudo pip3"
+aliases["pip"] = "sudo pip"
+aliases["k"] = "kubectl"
 aliases["km"] = "echo black . ; black .;echo isort -rc . ; isort -rc .; echo flake8 . ; flake8 .; echo mypy . ./src/; mypy . ./src/"
 aliases["jup"] = "jupyter notebook --ip 0.0.0.0 --allow-root --no-browser --no-mathjax --notebook-dir ."
 aliases["juph"] = "jupyter notebook --ip 0.0.0.0 --allow-root --no-browser --no-mathjax --notebook-dir /home"
