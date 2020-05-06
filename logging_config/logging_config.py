@@ -19,7 +19,7 @@ logging_config = {
             "class": "logging.handlers.RotatingFileHandler",
             "level": "DEBUG",
             "formatter": "simple",
-            "filename": "./debug.log",
+            "filename": "./.logged_debug.log",
             "maxBytes": 10485760,  # 10MB
             "backupCount": 20,
             "encoding": "utf8",
@@ -29,7 +29,7 @@ logging_config = {
             "class": "logging.handlers.RotatingFileHandler",
             "level": "INFO",
             "formatter": "simple",
-            "filename": "./info.log",
+            "filename": "./.logged_info.log",
             "maxBytes": 10485760,  # 10MB
             "backupCount": 20,
             "encoding": "utf8",
@@ -39,7 +39,7 @@ logging_config = {
             "class": "logging.handlers.RotatingFileHandler",
             "level": "ERROR",
             "formatter": "simple",
-            "filename": "./errors.log",
+            "filename": "./.logged_errors.log",
             "maxBytes": 10485760,  # 10MB
             "backupCount": 20,
             "encoding": "utf8",
